@@ -34,4 +34,13 @@ $(document).ready(function () {
 
   // вызовем событие resize
   $(window).resize();
+
+  // Валидация формы
+  function validateForm() {
+    let username = document.forms["form"]["username"].value;
+    let userphone = document.forms["form"]["userphone"].value;
+    if (username.trim() == "" || userphone.trim() == "") {
+      return false;
+    }
+  }
 });
